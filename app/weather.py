@@ -21,6 +21,11 @@ class WeatherForecast:
 			forecast.append(data)
 		return forecast
 
-	def get_image(self):
-		pass
-      
+	def next_day_forecast(self, data):
+		new_list = list()
+
+		for next_day in data:
+			for i in range(1, len(next_day['consolidated_weather'])):
+				new_list.append(next_day['consolidated_weather'][i])
+
+		return new_list

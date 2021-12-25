@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search City</title>
-</head>
-<body>
-  {% block content %}
-  {% endblock content%}
-</body>
-</html>
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+  MetaWeather Forecast
+{% endblock title %}
+
+{% block navbar %}
+{% include "includes/navbar.html" %}
+{% endblock navbar %}
+
+{% block content %}{% endblock content %}

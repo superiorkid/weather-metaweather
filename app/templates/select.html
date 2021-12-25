@@ -1,9 +1,27 @@
-<form action="{{url_for('select')}}" method="post">
-  <label for="city">Choose a City:</label>
-  <select name="city">
-    {% for d in data %}
-    <option value="{{ d['woeid'] }}">{{d['title']}}, {{d['parent']['title']}}</option>
-    {% endfor %}
-  </select>
-  <input type="submit">
-</form>
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="vh-100">
+  <div class="container mt-3 py-5 h-100">
+
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-8 col-lg-6 col-xl-4">
+
+        <form action="{{url_for('select')}}" method="post">
+          
+          <div class="form-group">
+            <label for="city">Example select</label>
+            <select class="form-control" name="city" id="city">
+              {% for d in data %}
+                <option value="{{ d['woeid'] }}">{{d['title']}}, {{d['parent']['title']}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <input type="submit" class="btn btn-primary">
+        </form>
+
+      </div>
+    </div>
+    </div>
+    </section>
+{% endblock content %}

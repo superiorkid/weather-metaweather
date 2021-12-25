@@ -1,7 +1,7 @@
 # WeatherForecast_metaweatherAPI
 
-An easy to use and deploy web app built using Flask
-Wanna try this app? visit: [Link](#)
+An easy to use and deploy web app built using Flask <br>
+Wanna try this app? visit: [demo](https://demo-flaskxmetaweather.herokuapp.com/)
 
 ## Features
 

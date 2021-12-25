@@ -1,4 +1,5 @@
 import requests
+from datetime import datetime
 
 BASE_URL = 'https://www.metaweather.com/api/'
 
@@ -29,3 +30,16 @@ class WeatherForecast:
 				new_list.append(next_day['consolidated_weather'][i])
 
 		return new_list
+
+	def convert_day_str(self, data):
+		applicable_date = list()
+
+		for i in range(6):
+			for j in data:
+				date = j['consolidated_weather'][i]['applicable_date']
+				to_str = datetime.strptime(date, '%Y-%m-%d').strftime('%A')
+
+				applicable_date.append(to_str)
+
+
+		return applicable_date

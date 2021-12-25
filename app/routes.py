@@ -31,14 +31,16 @@ def index():
   # next 5 days
   next_days_forecast = weather.next_day_forecast(data)
 
-
   icon = list()
 
   for i in next_days_forecast:
     icons = os.path.join(app.config['UPLOAD_FOLDER'], f'{i["weather_state_abbr"]}.png')
     icon.append(icons)
+
+  # convert day to str
+  day_str = weather.convert_day_str(data)
   
-  return render_template('index.html', data=data, form=form, next_days=next_days_forecast, icons=icon, today_icon=today_icon)
+  return render_template('index.html', data=data, form=form, next_days=next_days_forecast, icons=icon, today_icon=today_icon, day_str=day_str)
 
 
 # if output woeid > 1
@@ -60,7 +62,10 @@ def select():
     for i in next_days_forecast:
       icons = os.path.join(app.config['UPLOAD_FOLDER'], f'{i["weather_state_abbr"]}.png')
       icon.append(icons)
+
+      # convert day to str
+    day_str = weather.convert_day_str(data)
   
-    return render_template('index.html', form=form, data=data, next_days=next_days_forecast, icons=icon, today_icon=today_icon)
+    return render_template('index.html', form=form, data=data, next_days=next_days_forecast, icons=icon, today_icon=today_icon, day_str=day_str)
 
   return redirect(url_for('index'))

@@ -24,11 +24,16 @@ pip install -r requirements.txt
   git clone https://github.com/superiorkid/WeatherForecast_metaweatherAPI.git
   ```
 
+- create a virtual enviroment for the project and activate it
+
+  ```
+  python -m venv venv
+  source venv/bin/activate
+   ```
+
 - install the dependencies by simply executing
 
   ```
-  [archlinux] >> pacman -S python-virtualenv
-
   pip install -r requirements.txt
   ```
 
@@ -38,4 +43,10 @@ pip install -r requirements.txt
   flask run
   ```
 
-- as
+- visit `127.0.0.1:5000` on your web browser
+
+## Result
+
+
+
+Built with ♥ by [`me`](https://github.com/superiorkid)

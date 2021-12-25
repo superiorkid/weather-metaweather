@@ -47,6 +47,7 @@ pip install -r requirements.txt
 
 ## Result
 
+![](https://github.com/superiorkid/WeatherForecast_metaweatherAPI/blob/master/result/weather_app_result.gif)
 
 
 Built with ♥ by [`me`](https://github.com/superiorkid)

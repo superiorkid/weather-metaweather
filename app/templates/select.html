@@ -10,7 +10,7 @@
         <form action="{{url_for('select')}}" method="post">
           
           <div class="form-group">
-            <label for="city">Example select</label>
+            <label for="city">Select result for {{data[0]['title'] }}</label>
             <select class="form-control" name="city" id="city">
               {% for d in data %}
                 <option value="{{ d['woeid'] }}">{{d['title']}}, {{d['parent']['title']}}</option>
